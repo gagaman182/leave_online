@@ -15,7 +15,7 @@
  include 'conn.php';
 
  
-  $query = "UPDATE leave_add
+  $sql = "UPDATE leave_add
 SET person_name = '" . $person_name ."',
 leave_type = '" . $leave_type ."',
 datestart = '" . $datestart ."',
@@ -30,19 +30,22 @@ WHERE id = '" . $id ."' ";
 
 
 
-
-
 $return_arr = array();
 
-if ($result = mysqli_query( $conn, $query )){
-  
-  $row_array['message'] = 'แก้ไขข้อมูลสำเร็จ';
-  array_push($return_arr,$row_array);
-  
- }else{
-  $row_array['message'] = 'ไม่สามารถแก้ไขข้อมูลได้';
-  array_push($return_arr,$row_array);
- }
+if ($conn->query($sql) === TRUE) {
+	
+	
+		$row_array['message'] = "แก้ไขข้อมูลสำเร็จ";
+		array_push($return_arr,$row_array);
+	
+        
+        
+	
+} else {
+	$row_array['message'] =  "ไม่สามารถแก้ไขข้อมูลได้ " ;
+	array_push($return_arr,$row_array);
+}
+
 
 mysqli_close($conn);
 

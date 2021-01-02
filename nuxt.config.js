@@ -68,8 +68,9 @@ module.exports = {
 
     axios: {
         // proxyHeaders: false
-        baseURL: "http://localhost/leave_online/template/backend/"
-            // baseURL: "http://192.168.5.187/leave/backend/"
+        // baseURL: "http://localhost/leave_online/template/backend/"
+        // baseURL: "http://192.168.5.187/leave/backend/"
+        baseURL: "http://192.168.4.3/webapp/leave/backend/"
     },
 
     /*
@@ -88,9 +89,9 @@ module.exports = {
          ** You can extend webpack config here
          */
         extend(config, ctx) {}
-    }
+    },
     // setให้สามารถ run คำสั่ง npm run generate แล้วได้ ไฟล์ dist เอาข้างในไป ใส่ใน path ที่เราต้องการ
-    // router: {
-    //     base: "/leave"
-    // }
+    router: {
+        base: "/webapp/leave"
+    }
 };

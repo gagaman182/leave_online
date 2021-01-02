@@ -214,6 +214,7 @@
             </v-dialog>
           </div>
         </v-flex>
+        {{ message }}
       </v-layout>
     </v-container>
   </div>

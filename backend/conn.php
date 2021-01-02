@@ -1,17 +1,27 @@
 <?php
 
 // hospital
+$servername = "192.168.4.3";
+$username = "root";
+$password = "1234";
+$dbname = "leave";
+
 // $servername = "192.168.5.187";
 // $username = "root";
 // $password = "123456";
 // $dbname = "leave";
 // $port = "3333";
+// $servername = "192.168.5.1";
+// $username = "root";
+// $password = "123456";
+// $dbname = "leave";
+// $port = "3333";
 // home
-$servername = "localhost";
-$username = "root";
-$password = "123456789";
-$dbname = "leave";
-$port = "3306";
+// $servername = "localhost";
+// $username = "root";
+// $password = "123456789";
+// $dbname = "leave";
+// $port = "3306";
 
 
 // Create connection
